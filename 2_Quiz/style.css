@@ -48,9 +48,8 @@ button{
     border:none;
     width:100%;
 }
-.result{
-
-
+button:hover {
+    background-color: rgb(1, 75, 1);
 }
 .result h2{
     width:100%;
