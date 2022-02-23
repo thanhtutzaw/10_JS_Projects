@@ -5,9 +5,69 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='./style.css'>
+    <link rel="prefetch preload" href="./script.js" as="fetch">
+    <!-- <link rel="stylesheet" href="./css/all.min.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <title>Recipe App</title>
+
+
+    <!-- <script>
+        (function () {
+            var css = document.createElement('link');
+            css.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" ';
+            css.rel = 'stylesheet';
+            css.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(css);
+}
+)();
+    </script> -->
+
+    <!-- <script defer src="../fav/js/all.js"></script> -->
 </head>
-<body>
+<body >
     
-    <script src="./script.js"></script>
+    <div class="mobile-container ">
+        <div class="main ">
+            <div class="search-bar">
+                <input type="search" name="search" id="search">
+                <button>
+                    <label for="search"><i class="fas fa-search"></i></label>
+                    <!-- <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label> -->
+                </button>
+            </div>
+
+            <div class="fav-meal">
+                <div class="fav-meal-header"><h4>Favourite Meals</h4></div>
+
+                <ul class="fav-meal-row" id="fav-meal">
+                    
+                    
+                    <li>
+                        <!-- <img id="fav-image" src="https://www.simplyrecipes.com/thmb/ZCFT9_ChypfZsVXbrkBYfdZHn9w=/2000x1333/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__06__Spicy-Fried-Chicken-LEAD-1-e7cb02e138b24cde9f0d3eefc519f88b.jpg" alt="">
+                        <span id="fav-span">Chicken0</span> -->
+                    </li>
+                    
+                </ul>
+                
+            </div>
+
+            <div class="meals" id="meals">
+                <div class="meal">
+                    <div class="meal-header">
+                        <span class="random">Random Meal</span>
+                        <img loading="lazy" rel="perload prefetch" title="Click" onclick="getRandom();" id="meal-image"  src="./loader.gif" alt="">
+                    </div>
+                    <div id="meal-body" class="meal-body">
+
+                    </div>
+
+                    <!-- <div class="meal-body">
+                        
+                        
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script rel="prefetch preload" as="script" src="./script.js"></script>
 </body>
