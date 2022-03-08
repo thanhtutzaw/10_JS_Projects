@@ -1,0 +1,47 @@
+*,*:before,*:after{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+};
+
+.row{
+    border: 3px solid red;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* width:70%;    */
+}
+img{
+    
+    border: 3px solid red;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.main{
+    border: 3px solid rgb(171, 202, 30);
+    height: 100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ul li {
+    list-style: none;
+}
+.card{
+    border: 3px solid rgb(22, 131, 204);
+    width:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.4rem;
+    
+}
+.bio{
+    border: 3px solid red;
+
+    max-width:70%;
+}
