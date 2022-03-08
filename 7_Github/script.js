@@ -39,10 +39,17 @@ function createCard(user) {
     `;
   main.innerHTML = cardHtml;
 }
-
+function CheckError(resp) {
+  if (resp.status >= 200 && resp.status <= 299) {
+    return resp.json();
+  } else {
+    throw Error(resp.statusText);
+  }
+}
 async function getRepo(user) {
   const resp = await fetch(API_URL + user + "/repos");
-  const data = await resp.json();
+  const data = await CheckError(resp) ;
+  repoUi(data)
 }
 
 function repoUi(repos) {
@@ -50,7 +57,7 @@ function repoUi(repos) {
 
   console.log(repos);
   repos
-    .sort((a, b) => a.stargazers_count - b.stargazers_count)
+    .sort((a, b) => b.size - a.size)
     .slice(0, 10)
     .forEach((repo) => {
       const repoChild = document.createElement("a");
